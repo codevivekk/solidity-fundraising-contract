@@ -1,1 +1,3 @@
-# solidity-fundrasing
+ I built a decentralized Fundraising contract where contributors can send ETH toward a campaign goal. If the goal is reached, the owner can withdraw all funds. If the deadline passes without reaching the goal, contributors can claim a full refund.
+I used immutable on the owner address for gas efficiency since it's set once at deployment. I implemented two modifiers — onlyOwner and validAmount — for clean reusable access control.
+Key improvements I made after review — fixing the inverted require logic in withdraw and refund functions, removing dangerous unchecked arithmetic, setting the deadline dynamically in the constructor, and adding events for full frontend transparency.
